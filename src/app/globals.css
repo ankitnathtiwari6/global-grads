@@ -2,20 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "TT Norms";
+  src: url("/fonts/TTNorms-Regular.woff2") format("woff2"),
+    url("/fonts/TTNorms-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("/fonts/TTNorms-Medium.woff2") format("woff2"),
+    url("/fonts/TTNorms-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("/fonts/TTNorms-Bold.woff2") format("woff2"),
+    url("/fonts/TTNorms-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  --background-color: #fffdf9;
+  --text-color: #2b2b2b;
 }

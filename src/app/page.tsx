@@ -1,101 +1,258 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { Phone, Mail, MapPin, ClipboardEdit } from "lucide-react";
+import { Navbar } from "./components/Navbar";
+import { LeadForm } from "./components/LeadForm";
+import { AchievementCard } from "./components/AchievementCard";
+import type { Country, SuccessStory } from "./components/types";
 import Image from "next/image";
+import CountrySection from "./components/CountrySection";
+import SuccessStoriesSection from "./components/SuccessStoriesSection";
+import YouTubeSection from "./components/YoutubeSection";
+import Footer from "./components/FooterSection";
+import MobileBottomBar from "./components/MobileBottomBarSection";
+
+const countries = [
+  {
+    name: "Russia",
+    flag: "🇷🇺",
+    universities: 25,
+    budgetRange: "15-40 Lakhs",
+    budgetNote: "Approx. yearly fee",
+    highlights: [
+      "Affordable MBBS Programs",
+      "MCI Approved Universities",
+      "English Medium",
+    ],
+  },
+  {
+    name: "Bangladesh",
+    flag: "🇧🇩",
+    universities: 15,
+    budgetRange: "30-40 Lakhs",
+    budgetNote: "Approx. yearly fee",
+    highlights: [
+      "Quality Medical Education",
+      "Similar Culture & Food",
+      "No Language Barrier",
+    ],
+  },
+  {
+    name: "Nepal",
+    flag: "🇳🇵",
+    universities: 10,
+    budgetRange: "30-40 Lakhs",
+    budgetNote: "Approx. yearly fee",
+    highlights: [
+      "Close to India",
+      "Cultural Familiarity",
+      "Recognized Institutions",
+    ],
+  },
+  {
+    name: "Kazakhstan",
+    flag: "🇰🇿",
+    universities: 12,
+    budgetRange: "20-30 Lakhs",
+    budgetNote: "Approx. yearly fee",
+    highlights: [
+      "Modern Infrastructure",
+      "Safe Environment",
+      "Growing Medical Hub",
+    ],
+  },
+  {
+    name: "Uzbekistan",
+    flag: "🇺🇿",
+    universities: 8,
+    budgetRange: "20-30 Lakhs",
+    budgetNote: "Approx. yearly fee",
+    highlights: [
+      "Advanced Facilities",
+      "Affordable Living Cost",
+      "Rich Medical Heritage",
+    ],
+  },
+  {
+    name: "Georgia",
+    flag: "🇬🇪",
+    universities: 6,
+    budgetRange: "20-30 Lakhs",
+    budgetNote: "Approx. yearly fee",
+    highlights: [
+      "European Standards",
+      "Quality Education",
+      "Globally Recognized",
+    ],
+  },
+  {
+    name: "China",
+    flag: "🇨🇳",
+    universities: 30,
+    budgetRange: "30-40 Lakhs",
+    budgetNote: "Approx. yearly fee",
+    highlights: [
+      "World-Class Facilities",
+      "Advanced Technology",
+      "International Exposure",
+    ],
+  },
+];
+
+const successStories: SuccessStory[] = [
+  {
+    name: "John Doe",
+    university: "Medical University of Warsaw",
+    year: 2023,
+    image: "/students/john.jpg",
+    testimony: "Successfully completed MBBS and now practicing in US",
+  },
+  // Add more success stories
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen bg-[#fffdf9]">
+      <Navbar />
+      {/* Hero Section */}
+      <section id="home" className="pt-20 mt-12">
+        <div className="bg-[#fffdf9] text-[#2b2b2b]">
+          <div className="container mx-auto px-4">
+            {/* Mobile Image - Only visible on mobile */}
+            <div className="md:hidden w-full h-64 relative flex justify-start mb-8 pl-8">
+              <Image
+                src="/Purple and Pink Modern Language Course Home Page Desktop Prototype (4).png"
+                alt="Medical Student"
+                fill
+                style={{ objectFit: "contain", objectPosition: "left center" }}
+                priority
+                className="w-full"
+              />
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="flex flex-col md:flex-row items-center">
+              {/* Left Content */}
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2b2b2b]">
+                  Study MBBS Abroad
+                  <span className="block mt-2 text-[#dd1d2d]">
+                    Your Dream, Our Mission
+                  </span>
+                </h1>
+                <p className="text-lg mb-8 text-[#2b2b2b]">
+                  Get expert guidance for MBBS admission in top medical
+                  universities worldwide
+                </p>
+                <div className="flex space-x-4">
+                  <button
+                    className="bg-[#dd1d2d] text-[#fffdf9] px-6 py-3 rounded-lg font-medium hover:bg-[#dd1d2d]/90 transition-all flex items-center"
+                    onClick={() =>
+                      document
+                        .getElementById("lead-form")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
+                  >
+                    <ClipboardEdit className="h-5 w-5 mr-2" />
+                    Register Now
+                  </button>
+                  <Link
+                    href="tel:+1234567890"
+                    className="border-2 border-[#dd1d2d] text-[#dd1d2d] px-6 py-3 rounded-lg font-medium hover:bg-[#dd1d2d] hover:text-[#fffdf9] transition-all flex items-center"
+                  >
+                    <Phone className="h-5 w-5 mr-2" />
+                    Call Now
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Side Image - Hidden on mobile */}
+              <div className="hidden md:block md:w-1/2 relative h-[500px]">
+                <Image
+                  src="/Purple and Pink Modern Language Course Home Page Desktop Prototype (4).png"
+                  alt="Medical Student"
+                  fill
+                  style={{ objectFit: "contain" }}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      {/* Lead Form Section */}
+      <section id="lead-form" className="py-8 md:py-20 bg-[#fffdf9]">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-12">
+            {/* Left Side Content */}
+            <div className="md:w-1/2 space-y-6">
+              <h2 className="text-4xl font-bold text-[#2b2b2b]">
+                Get Free Counseling
+              </h2>
+              <div className="space-y-4">
+                <p className="text-lg text-[#2b2b2b]/80">
+                  Take the first step towards your medical career. Our expert
+                  counselors will guide you through:
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "University Selection",
+                    "Admission Process",
+                    "Visa Guidance",
+                    "Financial Planning",
+                    "Career Opportunities",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center space-x-3">
+                      <svg
+                        className="h-5 w-5 text-[#723bcf]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span className="text-[#2b2b2b]/80">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Right Side Form */}
+            <div className="md:w-1/2 w-full">
+              <div className="bg-[#fffdf9] p-8 rounded-lg shadow-lg border border-gray-200">
+                <LeadForm />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Countries Section */}
+      <CountrySection />
+      {/* youtube videos Section */}
+      <YouTubeSection />
+      {/* Success Stories Section */}
+      {/* <SuccessStoriesSection /> */}
+      {/* Achievements Section */}{" "}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <AchievementCard count="1000" title="Students Placed" />
+            <AchievementCard count="50" title="Partner Universities" />
+            <AchievementCard count="15" title="Countries" />
+            <AchievementCard count="10" title="Years Experience" />
+          </div>
+        </div>
+      </section>
+      <MobileBottomBar />
+      {/* Contact Section */}
+      <Footer />
+    </main>
   );
 }
