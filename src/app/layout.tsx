@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+
 import { ReduxProvider } from "@/redux/provider";
 
 export const metadata: Metadata = {
