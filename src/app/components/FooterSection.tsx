@@ -244,7 +244,7 @@ const Footer: FC = () => {
             <ul className="space-y-3">
               {countries.map((item) => {
                 return (
-                  <li>
+                  <li key={item.name}>
                     <a
                       href="#"
                       className="text-gray-400 hover:text-white transition-colors"
@@ -262,7 +262,7 @@ const Footer: FC = () => {
             <ul className="space-y-3">
               {topcolleges.map((item) => {
                 return (
-                  <li>
+                  <li key={item}>
                     <a
                       href="#"
                       className="text-gray-400 hover:text-white transition-colors"

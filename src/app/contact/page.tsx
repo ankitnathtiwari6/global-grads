@@ -82,7 +82,7 @@ const ContactPage: React.FC = () => {
           <div className="relative container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Let's Start Your
+                {`Let's Start Your`}
                 <span className="text-blue-200"> Global Education</span> Journey
               </h1>
               <p className="text-xl text-blue-100 mb-8">
