@@ -9,7 +9,6 @@ import Footer from "../components/FooterSection";
 import MobileBottomBar from "../components/MobileBottomBarSection";
 import { Search, MapPin, Clock, DollarSign, CheckCircle } from "lucide-react";
 import type { University, FAQ } from "../types/universities";
-import universities from "../data/universitiesData";
 interface UniversitiesPageProps {
   universities: University[];
 }

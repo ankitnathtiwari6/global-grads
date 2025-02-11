@@ -1,6 +1,5 @@
 import { type FC } from "react";
 import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
-import universities from "../data/universitiesData";
 import { countries } from "../data/countries";
 
 const topcolleges = [

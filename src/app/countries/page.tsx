@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { GraduationCap, Building2, DollarSign, ArrowRight } from "lucide-react";
+import { DollarSign, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/FooterSection";

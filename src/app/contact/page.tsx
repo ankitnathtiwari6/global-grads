@@ -13,16 +13,36 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/FooterSection";
 
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+interface StatItem {
+  count: string;
+  label: string;
+}
+
+const stats: StatItem[] = [
+  { count: "1000+", label: "Students Placed" },
+  { count: "50+", label: "Partner Universities" },
+  { count: "15+", label: "Countries" },
+];
+
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -30,12 +50,23 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", phone: "", message: "" });
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
+      // Reset form
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -81,20 +112,17 @@ const ContactPage = () => {
         {/* Stats Section */}
         <div className="container mx-auto px-4 -mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform">
-              <div className="text-3xl font-bold text-[#723bcf] mb-2">
-                1000+
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform"
+              >
+                <div className="text-3xl font-bold text-[#723bcf] mb-2">
+                  {stat.count}
+                </div>
+                <div className="text-gray-600">{stat.label}</div>
               </div>
-              <div className="text-gray-600">Students Placed</div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform">
-              <div className="text-3xl font-bold text-[#723bcf] mb-2">50+</div>
-              <div className="text-gray-600">Partner Universities</div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform">
-              <div className="text-3xl font-bold text-[#723bcf] mb-2">15+</div>
-              <div className="text-gray-600">Countries</div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -241,7 +269,7 @@ const ContactPage = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary text-white py-4 rounded-lg hover:bg-[#723bcf] transition-colors flex items-center justify-center space-x-2 disabled:opacity-70"
+                    className="w-full bg-[#723bcf] text-white py-4 rounded-lg hover:bg-[#8651d4] transition-colors flex items-center justify-center space-x-2 disabled:opacity-70"
                   >
                     {isSubmitting ? (
                       <>

@@ -1,5 +1,4 @@
 // app/universities/page.jsx
-import { Metadata } from "next";
 import UniversitiesPage from "./UniversitiesPage";
 import universities from "../data/universitiesData";
 
