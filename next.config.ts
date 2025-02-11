@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: "/global-grads", // Your repository name
-  assetPrefix: "https://ankitnathtiwari6.github.io/global-grad/",
+  assetPrefix: "https://ankitnathtiwari6.github.io/global-grads/",
   images: {
     unoptimized: true,
   },
