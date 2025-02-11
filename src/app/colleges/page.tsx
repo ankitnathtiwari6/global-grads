@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { Search, Filter } from "lucide-react";
+import { Search } from "lucide-react";
 import Link from "next/link";
 import { collegesData } from "../data/colleges";
 

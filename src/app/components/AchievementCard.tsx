@@ -1,5 +1,4 @@
 import { type FC } from "react";
-import { Trophy, Users, GraduationCap, Globe } from "lucide-react";
 
 interface AchievementCardProps {
   count: string;
@@ -8,21 +7,12 @@ interface AchievementCardProps {
   description?: string;
 }
 
-const IconMap = {
-  trophy: Trophy,
-  users: Users,
-  graduation: GraduationCap,
-  globe: Globe,
-};
-
 export const AchievementCard: FC<AchievementCardProps> = ({
   count,
   title,
   icon = "trophy",
   description,
 }) => {
-  const IconComponent = IconMap[icon];
-
   return (
     <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
       <div className="flex flex-col items-center">

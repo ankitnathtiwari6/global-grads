@@ -2,115 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
-import { Phone, Mail, MapPin, ClipboardEdit } from "lucide-react";
+import { Phone, ClipboardEdit } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { LeadForm } from "./components/LeadForm";
 import { AchievementCard } from "./components/AchievementCard";
-import type { Country, SuccessStory } from "./components/types";
+import type { SuccessStory } from "./components/types";
 import Image from "next/image";
 import CountrySection from "./components/CountrySection";
-import SuccessStoriesSection from "./components/SuccessStoriesSection";
 import YouTubeSection from "./components/YoutubeSection";
 import Footer from "./components/FooterSection";
 import MobileBottomBar from "./components/MobileBottomBarSection";
-
-const countries = [
-  {
-    name: "Russia",
-    flag: "🇷🇺",
-    universities: 25,
-    budgetRange: "15-40 Lakhs",
-    budgetNote: "Approx. yearly fee",
-    highlights: [
-      "Affordable MBBS Programs",
-      "MCI Approved Universities",
-      "English Medium",
-    ],
-  },
-  {
-    name: "Bangladesh",
-    flag: "🇧🇩",
-    universities: 15,
-    budgetRange: "30-40 Lakhs",
-    budgetNote: "Approx. yearly fee",
-    highlights: [
-      "Quality Medical Education",
-      "Similar Culture & Food",
-      "No Language Barrier",
-    ],
-  },
-  {
-    name: "Nepal",
-    flag: "🇳🇵",
-    universities: 10,
-    budgetRange: "30-40 Lakhs",
-    budgetNote: "Approx. yearly fee",
-    highlights: [
-      "Close to India",
-      "Cultural Familiarity",
-      "Recognized Institutions",
-    ],
-  },
-  {
-    name: "Kazakhstan",
-    flag: "🇰🇿",
-    universities: 12,
-    budgetRange: "20-30 Lakhs",
-    budgetNote: "Approx. yearly fee",
-    highlights: [
-      "Modern Infrastructure",
-      "Safe Environment",
-      "Growing Medical Hub",
-    ],
-  },
-  {
-    name: "Uzbekistan",
-    flag: "🇺🇿",
-    universities: 8,
-    budgetRange: "20-30 Lakhs",
-    budgetNote: "Approx. yearly fee",
-    highlights: [
-      "Advanced Facilities",
-      "Affordable Living Cost",
-      "Rich Medical Heritage",
-    ],
-  },
-  {
-    name: "Georgia",
-    flag: "🇬🇪",
-    universities: 6,
-    budgetRange: "20-30 Lakhs",
-    budgetNote: "Approx. yearly fee",
-    highlights: [
-      "European Standards",
-      "Quality Education",
-      "Globally Recognized",
-    ],
-  },
-  {
-    name: "China",
-    flag: "🇨🇳",
-    universities: 30,
-    budgetRange: "30-40 Lakhs",
-    budgetNote: "Approx. yearly fee",
-    highlights: [
-      "World-Class Facilities",
-      "Advanced Technology",
-      "International Exposure",
-    ],
-  },
-];
-
-const successStories: SuccessStory[] = [
-  {
-    name: "John Doe",
-    university: "Medical University of Warsaw",
-    year: 2023,
-    image: "/students/john.jpg",
-    testimony: "Successfully completed MBBS and now practicing in US",
-  },
-  // Add more success stories
-];
 
 export default function Home() {
   return (

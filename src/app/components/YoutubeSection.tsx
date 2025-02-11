@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Play, X, ExternalLink, ThumbsUp, Share2 } from "lucide-react";
+import Image from "next/image";
 
 interface VideoData {
   id: number;
@@ -21,7 +22,7 @@ const videoData: VideoData[] = [
       "Top 5 Medical Universities in Russia | Total Cost & Fee | Admission Process | MBBS IN RUSSIA",
     description:
       "In this comprehensive guide, we cover everything you need to know about pursuing MBBS in top international universities. From admission requirements to career prospects, get all your questions answered.",
-    thumbnailUrl: "top_5_thumnail.jpg",
+    thumbnailUrl: "/top_5_thumnail.jpg",
     videoUrl: "https://www.youtube.com/watch?v=PAHmFigrtX4&t=134s",
     views: 15000,
     likes: 1200,
@@ -47,7 +48,7 @@ const videoData: VideoData[] = [
     title: "Tver State Medical University | GLOBAL GRADS",
     description:
       "Leading medical educators discuss the future of medical education and how international exposure shapes better doctors. Learn about different medical education systems worldwide.",
-    thumbnailUrl: "tver_thumbnail.jpg",
+    thumbnailUrl: "/tver_thumbnail.jpg",
     videoUrl: "https://www.youtube.com/watch?v=TnBwQiWtlug",
     views: 12000,
     likes: 1500,
@@ -121,11 +122,14 @@ const YouTubeSection: React.FC = () => {
             >
               {/* Thumbnail Container */}
               <div className="relative aspect-video">
-                <img
+                <Image
                   src={video.thumbnailUrl}
                   alt={video.title}
-                  className="w-full h-full object-cover"
+                  width={480}
+                  height={270}
+                  className="w-full rounded-lg"
                 />
+
                 <button
                   onClick={() => setSelectedVideo(video)}
                   className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"

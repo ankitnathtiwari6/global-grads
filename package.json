@@ -1,8 +1,11 @@
 {
   "name": "language-academy",
+  "homepage": "https://ankitnathtiwari6.github.io/global-grads",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -10,6 +13,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.475.0",
     "next": "15.1.6",
     "react": "^19.0.0",
