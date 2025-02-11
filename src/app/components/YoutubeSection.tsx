@@ -123,7 +123,7 @@ const YouTubeSection: React.FC = () => {
               {/* Thumbnail Container */}
               <div className="relative aspect-video">
                 <Image
-                  src={video.thumbnailUrl}
+                  src={`.${video.thumbnailUrl}`}
                   alt={video.title}
                   width={480}
                   height={270}

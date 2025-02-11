@@ -23,7 +23,7 @@ export default function Home() {
             {/* Mobile Image - Only visible on mobile */}
             <div className="md:hidden w-full h-64 relative flex justify-start mb-8 pl-8">
               <Image
-                src="/Purple and Pink Modern Language Course Home Page Desktop Prototype (4).png"
+                src="./Purple and Pink Modern Language Course Home Page Desktop Prototype (4).png"
                 alt="Medical Student"
                 fill
                 style={{ objectFit: "contain", objectPosition: "left center" }}
@@ -70,7 +70,7 @@ export default function Home() {
               {/* Right Side Image - Hidden on mobile */}
               <div className="hidden md:block md:w-1/2 relative h-[500px]">
                 <Image
-                  src="/Purple and Pink Modern Language Course Home Page Desktop Prototype (4).png"
+                  src="./Purple and Pink Modern Language Course Home Page Desktop Prototype (4).png"
                   alt="Medical Student"
                   fill
                   style={{ objectFit: "contain" }}
