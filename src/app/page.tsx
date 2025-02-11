@@ -45,7 +45,7 @@ export default function Home() {
                   Get expert guidance for MBBS admission in top medical
                   universities worldwide
                 </p>
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 sm:space-x-4">
                   <button
                     className="bg-[#dd1d2d] text-[#fffdf9] px-6 py-3 rounded-lg font-medium hover:bg-[#dd1d2d]/90 transition-all flex items-center"
                     onClick={() =>
@@ -59,9 +59,9 @@ export default function Home() {
                   </button>
                   <Link
                     href="tel:+1234567890"
-                    className="border-2 border-[#dd1d2d] text-[#dd1d2d] px-6 py-3 rounded-lg font-medium hover:bg-[#dd1d2d] hover:text-[#fffdf9] transition-all flex items-center"
+                    className="border-2 border-[#dd1d2d] text-[#dd1d2d] px-6 py-2.5 rounded-lg font-medium hover:bg-[#dd1d2d] hover:text-[#fffdf9] transition-all flex items-center"
                   >
-                    <Phone className="h-5 w-5 mr-2" />
+                    <Phone className="h-4 w-4 mr-2" />
                     Call Now
                   </Link>
                 </div>
