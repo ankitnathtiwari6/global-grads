@@ -23,7 +23,7 @@ const videoData: VideoData[] = [
     description:
       "In this comprehensive guide, we cover everything you need to know about pursuing MBBS in top international universities. From admission requirements to career prospects, get all your questions answered.",
     thumbnailUrl: "/top_5_thumnail.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=PAHmFigrtX4&t=134s",
+    videoUrl: "https://www.youtube.com/watch?v=PAHmFigrtX4",
     views: 15000,
     likes: 1200,
     duration: "12:45",
@@ -32,11 +32,12 @@ const videoData: VideoData[] = [
   },
   {
     id: 2,
-    title: "Tour Of Orenburg City Russia | Orenburg State Medical University",
+    title:
+      "MBBS Under 20 Lakhs | Study MBBS Abroad | RUSSIA | Complete Details : Fee, Eligibilty, Facilities",
     description:
-      "Get a glimpse of what life looks like for international medical students. Tour the campus facilities, see the accommodation, and learn about the vibrant student community.",
-    thumbnailUrl: "/orenburg_thumbnail.jpg",
-    videoUrl: "https://youtube.com/embed/video2",
+      "Top Russian universities where you can pursue your MBBS degree for under ₹20 lakhs! From top-notch education to globally recognized degrees, ",
+    thumbnailUrl: "/mbbs_thumbnail_2.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=Utvo8wNKfrM",
     views: 8500,
     likes: 945,
     duration: "18:30",
@@ -157,14 +158,8 @@ const YouTubeSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between text-sm text-gray-500">
-                  <div className="flex items-center gap-4">
-                    <span className="flex items-center gap-1">
-                      <ThumbsUp className="w-4 h-4" />
-                      {formatViews(video.likes)}
-                    </span>
-                    <span>{formatViews(video.views)} views</span>
-                  </div>
-                  <span>{video.category}</span>
+                  <div className="flex items-center gap-4"></div>
+                  {/* <span>{video.category}</span> */}
                 </div>
               </div>
             </div>
@@ -173,37 +168,44 @@ const YouTubeSection: React.FC = () => {
 
         {/* Video Modal */}
         {selectedVideo && (
-          <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl w-full max-w-5xl">
-              <div className="flex justify-between items-center p-4 border-b">
-                <h3 className="text-xl font-bold text-gray-900">
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+            <div
+              className="bg-white rounded-xl w-[90%] max-w-3xl mx-auto transform transition-all scale-95 hover:scale-100"
+              style={{ maxHeight: "calc(90vh - 2rem)" }}
+            >
+              {/* Modal Header */}
+              <div className="flex justify-between items-center p-3 border-b relative">
+                <h3 className="text-lg font-semibold text-gray-900 pr-8 line-clamp-1">
                   {selectedVideo.title}
                 </h3>
                 <button
                   onClick={() => setSelectedVideo(null)}
-                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  className="absolute right-2 top-2 p-1 hover:bg-gray-100 rounded-full transition-colors"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="relative pt-[56.25%]">
+              {/* Video Container */}
+              <div className="relative pt-[56.25%] bg-black">
                 <iframe
-                  src={selectedVideo.videoUrl}
+                  src={selectedVideo.videoUrl.replace("watch?v=", "embed/")}
                   className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
 
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-4">
-                  <div className="flex items-center gap-4">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
-                      <ThumbsUp className="w-5 h-5" />
+              {/* Video Info */}
+              <div className="p-4 max-h-48 overflow-y-auto">
+                <div className="flex justify-between items-center mb-3">
+                  <div className="flex items-center gap-3">
+                    <button className="flex items-center gap-1 px-3 py-1.5 bg-purple-600 text-white text-sm rounded-lg hover:bg-purple-700">
+                      <ThumbsUp className="w-4 h-4" />
                       Like
                     </button>
-                    <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-                      <Share2 className="w-5 h-5" />
+                    <button className="flex items-center gap-1 px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg hover:bg-gray-200">
+                      <Share2 className="w-4 h-4" />
                       Share
                     </button>
                   </div>
@@ -211,20 +213,22 @@ const YouTubeSection: React.FC = () => {
                     href={selectedVideo.videoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-purple-600 hover:text-purple-700"
+                    className="flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700"
                   >
-                    <ExternalLink className="w-5 h-5" />
+                    <ExternalLink className="w-4 h-4" />
                     Watch on YouTube
                   </a>
                 </div>
 
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 text-sm mb-3 line-clamp-2">
                   {selectedVideo.description}
                 </p>
 
-                <div className="flex items-center gap-4 text-sm text-gray-500">
+                <div className="flex items-center gap-3 text-xs text-gray-500">
                   <span>{formatViews(selectedVideo.views)} views</span>
+                  <span>•</span>
                   <span>{selectedVideo.uploadDate}</span>
+                  <span>•</span>
                   <span>{selectedVideo.category}</span>
                 </div>
               </div>

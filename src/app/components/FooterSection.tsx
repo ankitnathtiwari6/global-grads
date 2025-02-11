@@ -1,5 +1,26 @@
 import { type FC } from "react";
 import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import universities from "../data/universitiesData";
+import { countries } from "../data/countries";
+
+const topcolleges = [
+  "Altai State Medical University",
+  "Bashkir State Medical University",
+  "Far Eastern Federal University",
+  "I. M. Sechenov First Moscow State Medical University",
+  "Immanuel Kant Baltic Federal University",
+  "Kabardino-Balkarian State University",
+  "Kazan Federal University",
+  "Kazan State Medical University",
+  "Kemerovo State Medical University",
+  "Kursk State Medical University",
+  "Mari State University",
+  "Northern State Medical University",
+  "Pskov State University",
+  "Samara State Medical University",
+  "Ural State Medical University",
+  "Volgograd State Medical University",
+];
 
 const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
@@ -222,100 +243,36 @@ const Footer: FC = () => {
           <div className="col-span-1">
             <h3 className="text-white font-bold mb-4">STUDY DESTINATIONS</h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  MBBS in Russia
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  MBBS in Ukraine
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  MBBS in Kazakhstan
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  MBBS in Philippines
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  MBBS in Georgia
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  MBBS in Kyrgyzstan
-                </a>
-              </li>
+              {countries.map((item) => {
+                return (
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      MBBS in {item.name}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           <div className="col-span-1">
             <h3 className="text-white font-bold mb-4">TOP UNIVERSITIES</h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Kazan State Medical University
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Tbilisi State Medical University
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Davao Medical School
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Kiev Medical University
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Batumi State University
-                </a>
-              </li>
+              {topcolleges.map((item) => {
+                return (
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

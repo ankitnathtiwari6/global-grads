@@ -58,7 +58,7 @@ export default function Home() {
                     Register Now
                   </button>
                   <Link
-                    href="tel:+1234567890"
+                    href="tel:+919696902475"
                     className="border-2 border-[#dd1d2d] text-[#dd1d2d] px-6 py-2.5 rounded-lg font-medium hover:bg-[#dd1d2d] hover:text-[#fffdf9] transition-all flex items-center"
                   >
                     <Phone className="h-4 w-4 mr-2" />
