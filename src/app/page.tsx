@@ -6,7 +6,6 @@ import { Phone, ClipboardEdit } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { LeadForm } from "./components/LeadForm";
 import { AchievementCard } from "./components/AchievementCard";
-import type { SuccessStory } from "./components/types";
 import Image from "next/image";
 import CountrySection from "./components/CountrySection";
 import YouTubeSection from "./components/YoutubeSection";

@@ -10,7 +10,6 @@ interface AchievementCardProps {
 export const AchievementCard: FC<AchievementCardProps> = ({
   count,
   title,
-  icon = "trophy",
   description,
 }) => {
   return (
