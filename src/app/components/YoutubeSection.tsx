@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Play, X, ExternalLink, ThumbsUp, Share2 } from "lucide-react";
+import { Play, X } from "lucide-react";
 import Image from "next/image";
 
 interface VideoData {
@@ -72,16 +72,6 @@ const YouTubeSection: React.FC = () => {
     activeCategory === "All"
       ? videoData
       : videoData.filter((video) => video.category === activeCategory);
-
-  const formatViews = (views: number): string => {
-    if (views >= 1000000) {
-      return `${(views / 1000000).toFixed(1)}M`;
-    }
-    if (views >= 1000) {
-      return `${(views / 1000).toFixed(1)}K`;
-    }
-    return views.toString();
-  };
 
   return (
     <section className="py-16 bg-gradient-to-b from-purple-50 to-white">
