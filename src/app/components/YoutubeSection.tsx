@@ -168,69 +168,31 @@ const YouTubeSection: React.FC = () => {
 
         {/* Video Modal */}
         {selectedVideo && (
-          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
+            onClick={() => setSelectedVideo(null)}
+          >
             <div
-              className="bg-white rounded-xl w-[90%] max-w-3xl mx-auto transform transition-all scale-95 hover:scale-100"
-              style={{ maxHeight: "calc(90vh - 2rem)" }}
+              onClick={(e) => e.stopPropagation()}
+              className="w-[90%] max-w-4xl relative overflow-hidden rounded-2xl bg-black"
             >
-              {/* Modal Header */}
-              <div className="flex justify-between items-center p-3 border-b relative">
-                <h3 className="text-lg font-semibold text-gray-900 pr-8 line-clamp-1">
-                  {selectedVideo.title}
-                </h3>
-                <button
-                  onClick={() => setSelectedVideo(null)}
-                  className="absolute right-2 top-2 p-1 hover:bg-gray-100 rounded-full transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
+              <button
+                onClick={() => setSelectedVideo(null)}
+                className="absolute top-3 right-3 z-10 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-all duration-300"
+              >
+                <X className="w-5 h-5" />
+              </button>
 
-              {/* Video Container */}
-              <div className="relative pt-[56.25%] bg-black">
+              <div className="relative pt-[56.25%]">
                 <iframe
-                  src={selectedVideo.videoUrl.replace("watch?v=", "embed/")}
+                  src={`${selectedVideo.videoUrl.replace(
+                    "watch?v=",
+                    "embed/"
+                  )}?autoplay=1`}
                   className="absolute inset-0 w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
-              </div>
-
-              {/* Video Info */}
-              <div className="p-4 max-h-48 overflow-y-auto">
-                <div className="flex justify-between items-center mb-3">
-                  <div className="flex items-center gap-3">
-                    <button className="flex items-center gap-1 px-3 py-1.5 bg-purple-600 text-white text-sm rounded-lg hover:bg-purple-700">
-                      <ThumbsUp className="w-4 h-4" />
-                      Like
-                    </button>
-                    <button className="flex items-center gap-1 px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg hover:bg-gray-200">
-                      <Share2 className="w-4 h-4" />
-                      Share
-                    </button>
-                  </div>
-                  <a
-                    href={selectedVideo.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Watch on YouTube
-                  </a>
-                </div>
-
-                <p className="text-gray-700 text-sm mb-3 line-clamp-2">
-                  {selectedVideo.description}
-                </p>
-
-                <div className="flex items-center gap-3 text-xs text-gray-500">
-                  <span>{formatViews(selectedVideo.views)} views</span>
-                  <span>•</span>
-                  <span>{selectedVideo.uploadDate}</span>
-                  <span>•</span>
-                  <span>{selectedVideo.category}</span>
-                </div>
               </div>
             </div>
           </div>
