@@ -7,7 +7,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "323,600 ₽",
     language: "English",
-    imageUrl: "/images/universities/altai.jpg",
+    imageUrl: "/universities/Altai_2.JPG",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -33,7 +33,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "282,186 ₽",
     language: "English",
-    imageUrl: "/images/universities/bashkir.jpg",
+    imageUrl: "/universities/bashkhir_1.JPG",
     features: [
       "Government University",
       "Established in 1932",
@@ -58,7 +58,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "Varied",
     language: "English & Russian",
-    imageUrl: "/images/universities/chelyabinsk.jpg",
+    imageUrl: "/universities/Chelyabinsk_1.jpg",
     features: [
       "Established in 1976",
       "NMC & WHO Recognized",
@@ -83,7 +83,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "Varied",
     language: "English",
-    imageUrl: "/images/universities/chuvash.jpg",
+    imageUrl: "/universities/Chuvash_1.jpg",
     features: [
       "Established in 1967",
       "Biggest Anatomy Museum",
@@ -108,7 +108,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$3,000",
     language: "English",
-    imageUrl: "/images/universities/dagestan.jpg",
+    imageUrl: "/universities/Dagestan-state-medical-university_1.jpg",
     features: [
       "Established in 1932",
       "WHO & NMC Recognized",
@@ -133,7 +133,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$5,100",
     language: "English",
-    imageUrl: "/images/universities/far-eastern.jpg",
+    imageUrl: "/universities/Fefu_1.jpg",
     features: [
       "Established in 1899",
       "Top Research University",
@@ -158,7 +158,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$9,300",
     language: "English",
-    imageUrl: "/images/universities/sechenov.jpg",
+    imageUrl: "/universities/first_moscow_1.jpg",
     features: [
       "Established in 1758",
       "Largest Medical Research University",
@@ -183,7 +183,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$4,000",
     language: "English",
-    imageUrl: "/images/universities/immanuel-kant.jpg",
+    imageUrl: "/universities/Estatal Immanuel_1.jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -209,7 +209,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$4,500",
     language: "English",
-    imageUrl: "/images/universities/irkutsk.jpg",
+    imageUrl: "/universities/Irkutsk State Medical University _1.jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -235,7 +235,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$3,500",
     language: "English",
-    imageUrl: "/images/universities/kabardino-balkarian.jpg",
+    imageUrl: "/universities/Kabardino-Balkarian State University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -261,7 +261,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$6,000",
     language: "English",
-    imageUrl: "/images/universities/kazan-federal.jpg",
+    imageUrl: "/universities/Kazan Federal University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -287,7 +287,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$4,750",
     language: "English",
-    imageUrl: "/images/universities/kazan-state.jpg",
+    imageUrl: "/universities/Kazan Federal University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -313,7 +313,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$3,800",
     language: "English",
-    imageUrl: "/images/universities/kemerovo-medical.jpg",
+    imageUrl: "/universities/Kemerovo State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -339,7 +339,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$5,500",
     language: "English",
-    imageUrl: "/images/universities/kursk.jpg",
+    imageUrl: "/universities/Kursk State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -365,7 +365,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$5,000",
     language: "English",
-    imageUrl: "/images/universities/lomonosov.jpg",
+    imageUrl: "/universities/Lomonosov Moscow State University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -391,7 +391,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$5,000",
     language: "English",
-    imageUrl: "/images/universities/mari.jpg",
+    imageUrl: "/universities/Mari State University.jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -417,7 +417,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$5,500",
     language: "English",
-    imageUrl: "/images/universities/nizhny.jpg",
+    imageUrl: "/universities/Nizhny Novgorod State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -443,7 +443,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$6,000",
     language: "English",
-    imageUrl: "/images/universities/northern.jpg",
+    imageUrl: "/universities/Northern State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -469,7 +469,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$4,500",
     language: "English",
-    imageUrl: "/images/universities/orel.jpg",
+    imageUrl: "/universities/Orel State University.jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -495,7 +495,8 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$4,400",
     language: "English",
-    imageUrl: "/images/universities/pavlov.jpg",
+    imageUrl:
+      "/universities/Pavlov First Saint Petersburg State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -521,7 +522,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$9,500",
     language: "English",
-    imageUrl: "/images/universities/peoples-friendship.jpg",
+    imageUrl: "/universities/People’s Friendship University .webp",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -547,7 +548,8 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$7,700",
     language: "English",
-    imageUrl: "/images/universities/pirogov.jpg",
+    imageUrl:
+      "/universities/Pirogov Russian National Research Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -573,7 +575,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$3,500",
     language: "English",
-    imageUrl: "/images/universities/pskov.jpg",
+    imageUrl: "/universities/Pskov State University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -599,7 +601,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$5,500",
     language: "English",
-    imageUrl: "/images/universities/ryazan.jpg",
+    imageUrl: "/universities/Ryazan State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -625,7 +627,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$4,000",
     language: "English",
-    imageUrl: "/images/universities/samara.jpg",
+    imageUrl: "/universities/Samara State Medical University.jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -651,7 +653,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$6,200",
     language: "English",
-    imageUrl: "/images/universities/saratov.jpg",
+    imageUrl: "/universities/Saratov State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -677,7 +679,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$6,150",
     language: "English",
-    imageUrl: "/images/universities/siberian.jpg",
+    imageUrl: "/universities/Siberian State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -703,7 +705,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$5,000",
     language: "English",
-    imageUrl: "/images/universities/syktyvkar.jpg",
+    imageUrl: "/universities/Syktyvkar State University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -729,7 +731,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$3,600",
     language: "English",
-    imageUrl: "/images/universities/ural.jpg",
+    imageUrl: "/universities/Ural State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
@@ -755,7 +757,7 @@ const universities = [
     courseLength: "6 years",
     annualFees: "$4,410",
     language: "English",
-    imageUrl: "/images/universities/volgograd.jpg",
+    imageUrl: "/universities/Volgograd State Medical University .jpg",
     features: [
       "WHO Recognized",
       "English Medium",
