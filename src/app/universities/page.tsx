@@ -1,9 +1,9 @@
-// app/universities/page.jsx
+import { Suspense } from "react";
 import UniversitiesPage from "./UniversitiesPage";
 import universities from "../data/universitiesData";
 
-// Static metadata for SEO
 export const metadata = {
+  metadataBase: new URL("https://yourdomain.com"), // Replace accordingly
   title: "Top Medical Universities Worldwide | Study MBBS Abroad",
   description:
     "Explore our partner medical universities across the globe. Find detailed information about MBBS programs, fees, and admission requirements at top medical schools.",
@@ -28,5 +28,9 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <UniversitiesPage universities={universities} />;
+  return (
+    <Suspense fallback={<div>Loading universities...</div>}>
+      <UniversitiesPage universities={universities} />
+    </Suspense>
+  );
 }

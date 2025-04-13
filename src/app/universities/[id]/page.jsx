@@ -1,4 +1,5 @@
 // app/universities/[id]/page.jsx
+import { Suspense } from "react";
 import { Metadata } from "next";
 import UniversityDetailPage from "./UniversityDetailPage";
 import universities from "../../data/universitiesData";
@@ -46,5 +47,9 @@ export default function Page({ params }) {
     return <div>University not found</div>;
   }
 
-  return <UniversityDetailPage university={university} />;
+  return (
+    <Suspense fallback={<div>Loading universities...</div>}>
+      <UniversityDetailPage university={university} />;
+    </Suspense>
+  );
 }

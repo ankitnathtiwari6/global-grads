@@ -4,8 +4,8 @@ interface Window {
     targetId: string,
     config?: {
       page_path?: string;
-      [key: string]: any;
+      [key: string]: unknown; // Avoid 'any' by using 'unknown'
     }
   ) => void;
-  dataLayer: any[];
+  dataLayer: Array<Record<string, unknown>>; // If dataLayer is an array of objects with unknown structure
 }
