@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const countries = [
   {
     name: "Russia",
@@ -157,9 +159,12 @@ const CountrySection = () => {
                 </div>
 
                 {/* CTA Button */}
-                <button className="w-full mt-6 bg-[#fffdf9] text-[#723bcf] border border-[#723bcf] py-2 rounded-lg hover:bg-[#723bcf] hover:text-white transition-colors">
-                  View Universities
-                </button>
+
+                <Link href="/universities">
+                  <button className="w-full mt-6 bg-[#fffdf9] text-[#723bcf] border border-[#723bcf] py-2 rounded-lg hover:bg-[#723bcf] hover:text-white transition-colors">
+                    View Universities
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

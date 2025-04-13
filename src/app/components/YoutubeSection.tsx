@@ -14,48 +14,89 @@ interface VideoData {
   category: string;
   uploadDate: string;
 }
-
 const videoData: VideoData[] = [
-  {
-    id: 1,
-    title:
-      "Top 5 Medical Universities in Russia | Total Cost & Fee | Admission Process | MBBS IN RUSSIA",
-    description:
-      "In this comprehensive guide, we cover everything you need to know about pursuing MBBS in top international universities. From admission requirements to career prospects, get all your questions answered.",
-    thumbnailUrl: "/top_5_thumnail.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=PAHmFigrtX4",
-    views: 15000,
-    likes: 1200,
-    duration: "12:45",
-    category: "Education",
-    uploadDate: "2024-01-15",
-  },
-  {
-    id: 2,
-    title:
-      "MBBS Under 20 Lakhs | Study MBBS Abroad | RUSSIA | Complete Details : Fee, Eligibilty, Facilities",
-    description:
-      "Top Russian universities where you can pursue your MBBS degree for under ₹20 lakhs! From top-notch education to globally recognized degrees, ",
-    thumbnailUrl: "/mbbs_thumbnail_2.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=Utvo8wNKfrM",
-    views: 8500,
-    likes: 945,
-    duration: "18:30",
-    category: "Campus Life",
-    uploadDate: "2024-02-01",
-  },
   {
     id: 3,
     title: "Tver State Medical University | GLOBAL GRADS",
     description:
       "Leading medical educators discuss the future of medical education and how international exposure shapes better doctors. Learn about different medical education systems worldwide.",
-    thumbnailUrl: "/tver_thumbnail.jpg",
+    thumbnailUrl: "/yt_thumbnails/Tver Thumbnail (3).png",
     videoUrl: "https://www.youtube.com/watch?v=TnBwQiWtlug",
     views: 12000,
     likes: 1500,
     duration: "15:20",
     category: "Medical Education",
     uploadDate: "2024-02-10",
+  },
+  {
+    id: 4,
+    title:
+      "DISADVANTAGES OF MBBS IN RUSSIA | MUST WATCH | MBBS ABROAD | PROS AND CON | GLOBAL GRADS",
+    description:
+      "Discover the key disadvantages of pursuing MBBS in Russia, including language barriers, climate challenges, and clinical exposure limitations. Global Grads breaks down the pros and cons to help you make an informed decision before studying MBBS abroad.",
+    thumbnailUrl: "/yt_thumbnails/MBBS-a mistake.png",
+    videoUrl: "https://www.youtube.com/watch?v=xO4tWpbrGZs&t=39s",
+    views: 9800,
+    likes: 1050,
+    duration: "16:35",
+    category: "University Review",
+    uploadDate: "2024-03-05",
+  },
+  {
+    id: 8,
+    title:
+      "Altai State Medical University | Review | Fee, Hostel, Food & Everything | Total Cost 2025",
+    description:
+      "Comprehensive review of Altai State Medical University with updated 2025 cost estimates, detailed fee structure, hostel facilities, food options, and academic environment. Essential information for students planning to join in the upcoming academic year.",
+    thumbnailUrl: "/yt_thumbnails/altai.png",
+    videoUrl: "https://www.youtube.com/watch?v=altai_review_2025",
+    views: 8200,
+    likes: 970,
+    duration: "19:10",
+    category: "University Review",
+    uploadDate: "2024-04-05",
+  },
+
+  {
+    id: 6,
+    title: "Supreme Court Latest Judgement on MBBS Abroad | Must Watch",
+    description:
+      "Analysis of the recent Supreme Court ruling affecting students pursuing MBBS abroad. Essential information for current and prospective international medical students about recognition, licensing, and legal implications.",
+    thumbnailUrl: "/yt_thumbnails/mbbs_in_danger.png",
+    videoUrl: "https://www.youtube.com/watch?v=Mq3Fhu5S3PI",
+    views: 25000,
+    likes: 2300,
+    duration: "10:15",
+    category: "Legal Updates",
+    uploadDate: "2024-03-15",
+  },
+  {
+    id: 7,
+    title:
+      "Kazan State Medical University | 2025 | Fees, Cost, Hostel & Reviews | MBBS in Russia | Global Grads",
+    description:
+      "Kazan State Medical University is a top-ranked Russian medical university offering affordable MBBS programs for international students. Global Grads provides complete admission support, including fees, hostel details, and student reviews for 2025 intake.",
+    thumbnailUrl: "/yt_thumbnails/Kazan Thumbnail (1).png",
+    videoUrl: "https://www.youtube.com/watch?v=R-ZJZZktKTk",
+    views: 11200,
+    likes: 1350,
+    duration: "17:40",
+    category: "Medical Education",
+    uploadDate: "2024-03-22",
+  },
+  {
+    id: 5,
+    title:
+      "Ulyanovsk State Medical University | MBBS in Russia | Fees, Hostel, Eligibility | Global Grads",
+    description:
+      "Complete guide to Ulyanovsk State Medical University's MBBS program including admission eligibility criteria, fee structure, hostel facilities, and student life. Learn why this university is a popular choice for international medical students.",
+    thumbnailUrl: "/yt_thumbnails/ulyanosk.png",
+    videoUrl: "https://www.youtube.com/watch?v=bswYQ6o-wNI",
+    views: 7500,
+    likes: 890,
+    duration: "14:22",
+    category: "University Guide",
+    uploadDate: "2024-02-25",
   },
 ];
 
