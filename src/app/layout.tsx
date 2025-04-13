@@ -4,6 +4,7 @@ import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
 import { ReduxProvider } from "@/redux/provider";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "MBBS Abroad Consultancy",
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-tt-norms antialiased bg-[#fffdf9] text-[#2b2b2b] min-h-screen">
-        <GoogleAnalytics measurementId="G-DPPN0CNGDX" />
+        <Suspense fallback={null}>
+          <GoogleAnalytics measurementId="G-DPPN0CNGDX" />
+        </Suspense>
 
         <ReduxProvider>{children}</ReduxProvider>
       </body>

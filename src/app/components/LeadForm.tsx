@@ -43,7 +43,7 @@ export const LeadForm: React.FC = () => {
 
       // Send the data to your API endpoint using axios
       const response = await axios.post(
-        "http://localhost:3000/api/leads",
+        "https://api.globalgrads.in/api/leads",
         apiData
       );
 

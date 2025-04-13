@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import UniversitiesPage from "./UniversitiesPage";
 import universities from "../data/universitiesData";
 
@@ -28,9 +27,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return (
-    <Suspense fallback={<div>Loading universities...</div>}>
-      <UniversitiesPage universities={universities} />
-    </Suspense>
-  );
+  return <UniversitiesPage universities={universities} />;
 }

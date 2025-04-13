@@ -1,6 +1,4 @@
 // app/universities/[id]/page.jsx
-import { Suspense } from "react";
-import { Metadata } from "next";
 import UniversityDetailPage from "./UniversityDetailPage";
 import universities from "../../data/universitiesData";
 // Generate metadata for each university page
@@ -47,9 +45,5 @@ export default function Page({ params }) {
     return <div>University not found</div>;
   }
 
-  return (
-    <Suspense fallback={<div>Loading universities...</div>}>
-      <UniversityDetailPage university={university} />;
-    </Suspense>
-  );
+  return <UniversityDetailPage university={university} />;
 }
